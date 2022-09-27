@@ -15,11 +15,11 @@ public class Cell {
 		// TODO: Initialise the variables row, col 
 		this.row = row;
 		// NOW DO FOR THE COLUMN
-		
+		this.col = col;
 		
 		//TODO: call the method that sets the cell content to EMPTY
 		// JUST CALL THE clear() METHOD
-		 
+		this.clear(); 
 	}
 	
 
@@ -48,7 +48,7 @@ public class Cell {
 	public void clear() {
 		
 		// TODO: Set the value of content to Empty (Remember this is an enum)
-		content = ???;  //JUST MAKE THE CELL EMPTY. SEE THE ENUM AND ALLOCATE THE EMPTY ONE TO THI
+		content = Player.Empty;  //JUST MAKE THE CELL EMPTY. SEE THE ENUM AND ALLOCATE THE EMPTY ONE TO THI
 						//VARIABLE
 		
 	}

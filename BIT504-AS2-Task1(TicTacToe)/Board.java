@@ -14,7 +14,7 @@ public class Board {
 		
 	 //TODO: initialise the cells array using ROWS and COLS constants
 		//THIS IS HOW YOU CREATE AN ARRAY OF NEW CELL BUT WOULD WOULD BE THE ???
-		cells = new Cell[???][???];
+		cells = new Cell[GameMain.ROWS][GameMain.COLS];
 
 		
 		for (int row = 0; row < GameMain.ROWS; ++row) {
@@ -37,8 +37,8 @@ public class Board {
 		//COMPLETE ???
 		for(int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {             
-				if (cells[row][col].content == ???) {
-					return ???;   //WHAT WILL YOU RETURN IF THERE ARE ONE EMPTY CELL
+				if (cells[row][col].content == Player.Empty) {
+					return false;   //WHAT WILL YOU RETURN IF THERE ARE ONE EMPTY CELL
 				}
 			}
 		}
@@ -59,7 +59,7 @@ public class Board {
 		// Hint: Use the row code above as a starting point, remember that it goes cells[row][column] 
 		
 		//THE FIRST ONE IS AS BELOW. COMPLETE ???
-		if(cells[0][???].content == thePlayer && cells[1][???].content == thePlayer && cells[2][???].content == thePlayer) 
+		if(cells[0][playerCol].content == thePlayer && cells[1][playerCol].content == thePlayer && cells[2][playerCol].content == thePlayer) 
 			return true;
 				
 		// 3-in-the-diagonal
@@ -68,7 +68,7 @@ public class Board {
 		 		
 		// TODO: Check the diagonal in the other direction
 		//JUST WORK OUT THE POSITION OF CELL IN THE OTHER DIRECTION. [0][2] WOULD BE THE UPPER RIGHT
-		if(cells[0][2].content == thePlayer && cells[???][???].content == thePlayer  && cells[???][???].content == thePlayer)
+		if(cells[0][2].content == thePlayer && cells[1][1].content == thePlayer  && cells[2][0].content == thePlayer)
 			return true;
 
 		//no winner, keep playing
